@@ -1,14 +1,20 @@
-const message = ['Today is a good day', 'Always be Positive!', 'Be happy!!'];
-let randNum = Math.floor(Math.random() * 3)
+let randNum = Math.floor(Math.random() * 4)
 console.log(`The random Number is ${randNum}`)
 
-const displayMsg = (arr) => {
-    if (randNum === 0){
-        return arr[0];
-    }else if (randNum === 1){
-        return arr[1];
-    }else {
-        return arr[2];
+const charactersFactory = (names, tribe, bends) => {
+    return {
+        names,
+        tribe,
+        bends
     }
 }
-console.log(displayMsg(message))
+const characters1 = charactersFactory('Aang', 'Air Nation', "Everything(HE'S THE AVATAR!!)");
+const characters2 = charactersFactory('Katara', 'Water Nation', "Water(SHE'S THE PRINCESS!!)");
+const characters3 = charactersFactory('Sokka', 'Water Nation', "Nothing(BUT HE'S THE WARRIOR & JOKER TOO!!)");
+const characters4 = charactersFactory('Zuko', 'Fire Nation', "Fire(HE'S THE GREAT EMPEROR!!)");
+console.log(characters2)
+/*if (randNum === 0){
+    'your character is ';
+    "you're from the ";
+    'you bend ';
+}*/
